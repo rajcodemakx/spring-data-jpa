@@ -47,4 +47,5 @@ Desktop.ini
 /mvnw.cmd
 
 # Ignore .gitignore files in subdirectories (if you want to keep the root-level .gitignore only)
+**/.gitignore
 /.metadata/
