@@ -381,3 +381,6 @@ Caused by: java.lang.ClassNotFoundException: com.springDataJpa.entity.Student
 2024-10-07 22:17:17   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-07 22:17:17   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
 2024-10-07 22:17:17   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-07 22:40:36   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-07 22:40:36   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-5 - Shutdown initiated...
+2024-10-07 22:40:36   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-5 - Shutdown completed.
