@@ -1,4 +1,10 @@
 package com.springDataJpa.service;
 
-public class CircketPlayerService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class CricketPlayerService {
+
+
+
 }
