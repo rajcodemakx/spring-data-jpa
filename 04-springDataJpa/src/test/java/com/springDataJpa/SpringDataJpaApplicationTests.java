@@ -2,7 +2,7 @@ package com.springDataJpa;
 
 import com.springDataJpa.entity.Guardian;
 import com.springDataJpa.entity.Student;
-import com.springDataJpa.entity.StudentRepository;
+import com.springDataJpa.repository.StudentRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
