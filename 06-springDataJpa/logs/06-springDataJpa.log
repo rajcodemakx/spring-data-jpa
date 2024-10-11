@@ -1,363 +1,111 @@
-2024-10-09 21:56:23   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7654 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 21:56:23   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 21:56:23   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-09 21:56:23   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-09 21:56:25   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 21:56:25   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interface.
-2024-10-09 21:56:26   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 21:56:26   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 21:56:26   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 21:56:26   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 21:56:26   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 2914 ms
-2024-10-09 21:56:26   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 21:56:26   INFO  [restartedMain]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 21:56:26   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 21:56:27   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 21:56:27   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 21:56:27   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@541fda66
-2024-10-09 21:56:27   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 21:56:28  ERROR  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-2024-10-09 21:56:28   WARN  [restartedMain]  ConfigServletWebServerApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-2024-10-09 21:56:28   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 21:56:28   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 21:56:28   INFO  [restartedMain]  o.a.c.c.StandardService                    - Stopping service [Tomcat]
-2024-10-09 21:56:28   INFO  [restartedMain]  .s.b.a.l.ConditionEvaluationReportLogger   - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-09 21:56:28  ERROR  [restartedMain]  o.s.b.SpringApplication                    - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.springDataJpa.SpringDataJpaApplication.main(SpringDataJpaApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	... 18 common frames omitted
-Caused by: org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.hibernate.mapping.Value.checkColumnDuplication(Value.java:196)
-	at org.hibernate.mapping.MappingHelper.checkPropertyColumnDuplication(MappingHelper.java:251)
-	at org.hibernate.mapping.Component.checkColumnDuplication(Component.java:279)
-	at org.hibernate.mapping.MappingHelper.checkPropertyColumnDuplication(MappingHelper.java:251)
-	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:939)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:694)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:276)
-	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:496)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:280)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 22 common frames omitted
-2024-10-09 21:58:19   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7848 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 21:58:19   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 21:58:19   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-09 21:58:19   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-09 21:58:20   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 21:58:20   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
-2024-10-09 21:58:22   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 21:58:22   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 21:58:22   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 21:58:22   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 21:58:22   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 2476 ms
-2024-10-09 21:58:22   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 21:58:22   INFO  [restartedMain]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 21:58:22   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 21:58:22   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 21:58:22   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 21:58:23   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62c7fc22
-2024-10-09 21:58:23   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 21:58:23  ERROR  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-2024-10-09 21:58:23   WARN  [restartedMain]  ConfigServletWebServerApplicationContext   - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-2024-10-09 21:58:23   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 21:58:23   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 21:58:23   INFO  [restartedMain]  o.a.c.c.StandardService                    - Stopping service [Tomcat]
-2024-10-09 21:58:23   INFO  [restartedMain]  .s.b.a.l.ConditionEvaluationReportLogger   - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-09 21:58:23  ERROR  [restartedMain]  o.s.b.SpringApplication                    - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.springDataJpa.SpringDataJpaApplication.main(SpringDataJpaApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	... 18 common frames omitted
-Caused by: org.hibernate.MappingException: Column 'guardian_email_address' is duplicated in mapping for entity 'com.springDataJpa.entity.Student' (use '@Column(insertable=false, updatable=false)' when mapping multiple properties to the same column)
-	at org.hibernate.mapping.Value.checkColumnDuplication(Value.java:196)
-	at org.hibernate.mapping.MappingHelper.checkPropertyColumnDuplication(MappingHelper.java:251)
-	at org.hibernate.mapping.Component.checkColumnDuplication(Component.java:279)
-	at org.hibernate.mapping.MappingHelper.checkPropertyColumnDuplication(MappingHelper.java:251)
-	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:939)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:694)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:276)
-	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:496)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:280)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 22 common frames omitted
-2024-10-09 21:59:44   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7977 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 21:59:44   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 21:59:44   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-09 21:59:44   INFO  [restartedMain]  .e.DevToolsPropertyDefaultsPostProcessor   - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-09 21:59:46   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 21:59:46   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
-2024-10-09 21:59:47   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 21:59:47   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 21:59:47   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 21:59:47   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 21:59:47   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 2680 ms
-2024-10-09 21:59:47   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 21:59:47   INFO  [restartedMain]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 21:59:47   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 21:59:48   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 21:59:48   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 21:59:48   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ee3cbca
-2024-10-09 21:59:48   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 21:59:50   INFO  [restartedMain]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 21:59:50   WARN  [restartedMain]  o.h.e.j.s.SqlExceptionHelper               - SQL Warning Code: 0, SQLState: 00000
-2024-10-09 21:59:50   WARN  [restartedMain]  o.h.e.j.s.SqlExceptionHelper               - constraint "student_unique" of relation "student" does not exist, skipping
-2024-10-09 21:59:50   WARN  [restartedMain]  o.h.e.j.s.SqlExceptionHelper               - SQL Warning Code: 0, SQLState: 00000
-2024-10-09 21:59:50   WARN  [restartedMain]  o.h.e.j.s.SqlExceptionHelper               - constraint "guardian_unique" of relation "student" does not exist, skipping
-2024-10-09 21:59:50   INFO  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 21:59:50   WARN  [restartedMain]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 21:59:51   INFO  [restartedMain]  o.s.b.d.a.OptionalLiveReloadServer         - LiveReload server is running on port 35729
-2024-10-09 21:59:51   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat started on port 8080 (http) with context path '/'
-2024-10-09 21:59:51   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Started SpringDataJpaApplication in 7.404 seconds (process running for 8.281)
-2024-10-09 22:06:48   INFO  [File Watcher]  rtingClassPathChangeChangedEventListener   - Restarting due to 7 class path changes (0 additions, 6 deletions, 1 modification)
-2024-10-09 22:06:48   INFO  [Thread-5]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:06:48   INFO  [Thread-5]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 22:06:48   INFO  [Thread-5]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 22:06:48   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7977 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 22:06:48   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 22:06:48   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 22:06:48   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-2024-10-09 22:06:49   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 22:06:49   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 22:06:49   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 22:06:49   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 22:06:49   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 558 ms
-2024-10-09 22:06:49   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 22:06:49   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 22:06:49   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 22:06:49   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-2 - Starting...
-2024-10-09 22:06:49   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2962057e
-2024-10-09 22:06:49   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-2 - Start completed.
-2024-10-09 22:06:49   INFO  [restartedMain]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 22:06:49   INFO  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:06:49   WARN  [restartedMain]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 22:06:49   INFO  [restartedMain]  o.s.b.d.a.OptionalLiveReloadServer         - LiveReload server is running on port 35729
-2024-10-09 22:06:49   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat started on port 8080 (http) with context path '/'
-2024-10-09 22:06:50   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Started SpringDataJpaApplication in 1.406 seconds (process running for 427.098)
-2024-10-09 22:06:50   INFO  [restartedMain]  .ConditionEvaluationDeltaLoggingListener   - Condition evaluation unchanged
-2024-10-09 22:06:52   INFO  [File Watcher]  rtingClassPathChangeChangedEventListener   - Restarting due to 6 class path changes (6 additions, 0 deletions, 0 modifications)
-2024-10-09 22:06:52   INFO  [Thread-7]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:06:52   INFO  [Thread-7]  c.z.h.HikariDataSource                     - HikariPool-2 - Shutdown initiated...
-2024-10-09 22:06:52   INFO  [Thread-7]  c.z.h.HikariDataSource                     - HikariPool-2 - Shutdown completed.
-2024-10-09 22:06:52   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7977 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 22:06:52   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 22:06:53   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 22:06:53   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
-2024-10-09 22:06:53   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 22:06:53   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 22:06:53   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 22:06:53   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 22:06:53   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 672 ms
-2024-10-09 22:06:53   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 22:06:53   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 22:06:53   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 22:06:53   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-3 - Starting...
-2024-10-09 22:06:53   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@1e692e25
-2024-10-09 22:06:53   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-3 - Start completed.
-2024-10-09 22:06:53   INFO  [restartedMain]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 22:06:53   INFO  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:06:53   WARN  [restartedMain]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 22:06:53   INFO  [restartedMain]  o.s.b.d.a.OptionalLiveReloadServer         - LiveReload server is running on port 35729
-2024-10-09 22:06:54   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat started on port 8080 (http) with context path '/'
-2024-10-09 22:06:54   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Started SpringDataJpaApplication in 1.465 seconds (process running for 431.118)
-2024-10-09 22:06:54   INFO  [restartedMain]  .ConditionEvaluationDeltaLoggingListener   - Condition evaluation unchanged
-2024-10-09 22:21:24   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 9203 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 22:21:24   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 22:21:25   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 22:21:25   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
-2024-10-09 22:21:26   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 22:21:26   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 22:21:26   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 22:21:27   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 22:21:27   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 22:21:27   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15c16f19
-2024-10-09 22:21:27   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 22:21:28   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 22:21:29   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:21:29   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 22:21:30   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 5.941 seconds (process running for 7.923)
-2024-10-09 22:21:31   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:21:31   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 22:21:31   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 22:23:43   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 9388 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 22:23:43   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 22:23:44   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 22:23:44   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
-2024-10-09 22:23:45   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 22:23:45   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 22:23:45   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 22:23:46   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 22:23:46   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 22:23:46   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15c16f19
-2024-10-09 22:23:46   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 22:23:48   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 22:23:48   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:23:48   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 22:23:49   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 6.314 seconds (process running for 8.219)
-2024-10-09 22:23:50   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 22:23:50   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 22:23:50   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 23:02:08   INFO  [File Watcher]  rtingClassPathChangeChangedEventListener   - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-10-09 23:02:08   INFO  [Thread-11]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:02:08   INFO  [Thread-11]  c.z.h.HikariDataSource                     - HikariPool-3 - Shutdown initiated...
-2024-10-09 23:02:08   INFO  [Thread-11]  c.z.h.HikariDataSource                     - HikariPool-3 - Shutdown completed.
-2024-10-09 23:02:08   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Starting SpringDataJpaApplication using Java 21.0.4 with PID 7977 (/home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa/target/classes started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 23:02:08   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 23:02:08   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 23:02:08   INFO  [restartedMain]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
-2024-10-09 23:02:08   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat initialized with port 8080 (http)
-2024-10-09 23:02:08   INFO  [restartedMain]  o.a.c.c.StandardService                    - Starting service [Tomcat]
-2024-10-09 23:02:08   INFO  [restartedMain]  o.a.c.c.StandardEngine                     - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-09 23:02:08   INFO  [restartedMain]  o.a.c.c.C.[.[.[/]                          - Initializing Spring embedded WebApplicationContext
-2024-10-09 23:02:08   INFO  [restartedMain]  w.s.c.ServletWebServerApplicationContext   - Root WebApplicationContext: initialization completed in 547 ms
-2024-10-09 23:02:08   INFO  [restartedMain]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 23:02:08   INFO  [restartedMain]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 23:02:09   INFO  [restartedMain]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 23:02:09   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-4 - Starting...
-2024-10-09 23:02:09   INFO  [restartedMain]  c.z.h.p.HikariPool                         - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@3a34201f
-2024-10-09 23:02:09   INFO  [restartedMain]  c.z.h.HikariDataSource                     - HikariPool-4 - Start completed.
-2024-10-09 23:02:09   INFO  [restartedMain]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 23:02:09   INFO  [restartedMain]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:02:09   WARN  [restartedMain]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 23:02:09   INFO  [restartedMain]  o.s.b.d.a.OptionalLiveReloadServer         - LiveReload server is running on port 35729
-2024-10-09 23:02:09   INFO  [restartedMain]  o.s.b.w.e.t.TomcatWebServer                - Tomcat started on port 8080 (http) with context path '/'
-2024-10-09 23:02:09   INFO  [restartedMain]  c.s.SpringDataJpaApplication               - Started SpringDataJpaApplication in 1.391 seconds (process running for 3746.75)
-2024-10-09 23:02:09   INFO  [restartedMain]  .ConditionEvaluationDeltaLoggingListener   - Condition evaluation unchanged
-2024-10-09 23:02:11   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 12415 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 23:02:11   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 23:02:12   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 23:02:12   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
-2024-10-09 23:02:13   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 23:02:13   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 23:02:13   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 23:02:14   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 23:02:14   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 23:02:14   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4243341e
-2024-10-09 23:02:14   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 23:02:16   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 23:02:16   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:02:16   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 23:02:18   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 7.008 seconds (process running for 10.441)
-2024-10-09 23:02:18   WARN  [main]  o.h.e.j.s.SqlExceptionHelper               - SQL Error: 0, SQLState: 23505
-2024-10-09 23:02:18  ERROR  [main]  o.h.e.j.s.SqlExceptionHelper               - ERROR: duplicate key value violates unique constraint "student_unique"
-  Detail: Key (student_email_address, student_mobile_number)=(kumar@gmail.com, 1234567890) already exists.
-2024-10-09 23:02:18   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:02:18   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 23:02:18   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 23:02:32   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:02:32   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-4 - Shutdown initiated...
-2024-10-09 23:02:32   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-4 - Shutdown completed.
-2024-10-09 23:09:06   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 12995 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 23:09:06   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 23:09:07   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 23:09:07   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
-2024-10-09 23:09:08   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 23:09:08   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 23:09:08   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 23:09:08   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 23:09:08   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 23:09:09   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e2bd5e6
-2024-10-09 23:09:09   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 23:09:10   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 23:09:10   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:09:10   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 23:09:11   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 4.613 seconds (process running for 6.088)
-2024-10-09 23:09:11   WARN  [main]  o.h.e.j.s.SqlExceptionHelper               - SQL Error: 0, SQLState: 23505
-2024-10-09 23:09:11  ERROR  [main]  o.h.e.j.s.SqlExceptionHelper               - ERROR: duplicate key value violates unique constraint "student_unique"
-  Detail: Key (student_email_address, student_mobile_number)=(kumar@gmail.com, 1234567890) already exists.
-2024-10-09 23:09:11   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:09:11   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 23:09:11   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 23:10:18   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 13177 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 23:10:18   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 23:10:19   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 23:10:19   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
-2024-10-09 23:10:20   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 23:10:20   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 23:10:20   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 23:10:20   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 23:10:20   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 23:10:21   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8432469
-2024-10-09 23:10:21   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 23:10:22   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 23:10:22   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:10:22   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 23:10:23   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 4.779 seconds (process running for 6.157)
-2024-10-09 23:10:24   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:10:24   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 23:10:24   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
-2024-10-09 23:11:55   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 13343 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
-2024-10-09 23:11:55   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
-2024-10-09 23:11:56   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-09 23:11:56   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2024-10-09 23:11:56   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-09 23:11:56   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-09 23:11:56   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
-2024-10-09 23:11:57   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-09 23:11:57   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
-2024-10-09 23:11:57   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15c16f19
-2024-10-09 23:11:57   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
-2024-10-09 23:11:58   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-09 23:11:58   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:11:58   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-09 23:11:59   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 4.635 seconds (process running for 6.05)
-2024-10-09 23:12:00   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-09 23:12:00   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
-2024-10-09 23:12:00   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-11 08:42:24   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 6570 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
+2024-10-11 08:42:24   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
+2024-10-11 08:42:26   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11 08:42:26   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2024-10-11 08:42:27   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11 08:42:27   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11 08:42:27   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
+2024-10-11 08:42:27   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11 08:42:27   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
+2024-10-11 08:42:28   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@340c5fb6
+2024-10-11 08:42:28   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
+2024-10-11 08:42:30   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11 08:42:30   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:42:30   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11 08:42:31   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 7.298 seconds (process running for 10.638)
+2024-10-11 08:42:32   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=1, studentName=kumar, age=18, studentEmailId=kumar@gmail.com, studentMobileNumber=1234567890, guardian=Guardian(name=john, email=john@gmail.com, mobileNumber=9876543210))
+2024-10-11 08:42:32   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=10, studentName=deepa, age=18, studentEmailId=deepa@gmail.com, studentMobileNumber=1234567899, guardian=Guardian(name=irene, email=irene@gmail.com, mobileNumber=9876543219))
+2024-10-11 08:42:32   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=17, studentName=ajay, age=18, studentEmailId=ajay@gmail.com, studentMobileNumber=1234567806, guardian=Guardian(name=peter, email=peter@gmail.com, mobileNumber=9876543226))
+2024-10-11 08:42:32   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:42:32   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
+2024-10-11 08:42:32   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-11 08:47:32   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 6915 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
+2024-10-11 08:47:32   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
+2024-10-11 08:47:33   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11 08:47:33   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2024-10-11 08:47:34   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11 08:47:34   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11 08:47:34   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
+2024-10-11 08:47:34   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11 08:47:34   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
+2024-10-11 08:47:35   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@677cc4e8
+2024-10-11 08:47:35   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
+2024-10-11 08:47:36   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11 08:47:36   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:47:37   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 6.473 seconds (process running for 8.744)
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=2, studentName=anitha, age=20, studentEmailId=anitha@gmail.com, studentMobileNumber=1234567891, guardian=Guardian(name=alice, email=alice@gmail.com, mobileNumber=9876543211))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=3, studentName=ravi, age=21, studentEmailId=ravi@gmail.com, studentMobileNumber=1234567892, guardian=Guardian(name=robert, email=robert@gmail.com, mobileNumber=9876543212))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=4, studentName=priya, age=19, studentEmailId=priya@gmail.com, studentMobileNumber=1234567893, guardian=Guardian(name=carol, email=carol@gmail.com, mobileNumber=9876543213))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=5, studentName=raj, age=22, studentEmailId=raj@gmail.com, studentMobileNumber=1234567894, guardian=Guardian(name=david, email=david@gmail.com, mobileNumber=9876543214))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=6, studentName=meena, age=20, studentEmailId=meena@gmail.com, studentMobileNumber=1234567895, guardian=Guardian(name=emma, email=emma@gmail.com, mobileNumber=9876543215))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=7, studentName=vijay, age=19, studentEmailId=vijay@gmail.com, studentMobileNumber=1234567896, guardian=Guardian(name=frank, email=frank@gmail.com, mobileNumber=9876543216))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=8, studentName=sunitha, age=21, studentEmailId=sunitha@gmail.com, studentMobileNumber=1234567897, guardian=Guardian(name=grace, email=grace@gmail.com, mobileNumber=9876543217))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=9, studentName=arjun, age=23, studentEmailId=arjun@gmail.com, studentMobileNumber=1234567898, guardian=Guardian(name=henry, email=henry@gmail.com, mobileNumber=9876543218))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=11, studentName=manoj, age=22, studentEmailId=manoj@gmail.com, studentMobileNumber=1234567800, guardian=Guardian(name=jack, email=jack@gmail.com, mobileNumber=9876543220))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=12, studentName=shreya, age=19, studentEmailId=shreya@gmail.com, studentMobileNumber=1234567801, guardian=Guardian(name=karen, email=karen@gmail.com, mobileNumber=9876543221))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=13, studentName=akash, age=20, studentEmailId=akash@gmail.com, studentMobileNumber=1234567802, guardian=Guardian(name=leo, email=leo@gmail.com, mobileNumber=9876543222))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=14, studentName=reena, age=21, studentEmailId=reena@gmail.com, studentMobileNumber=1234567803, guardian=Guardian(name=maria, email=maria@gmail.com, mobileNumber=9876543223))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=15, studentName=vinay, age=23, studentEmailId=vinay@gmail.com, studentMobileNumber=1234567804, guardian=Guardian(name=nathan, email=nathan@gmail.com, mobileNumber=9876543224))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=16, studentName=lavanya, age=20, studentEmailId=lavanya@gmail.com, studentMobileNumber=1234567805, guardian=Guardian(name=oliver, email=oliver@gmail.com, mobileNumber=9876543225))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=18, studentName=radhika, age=19, studentEmailId=radhika@gmail.com, studentMobileNumber=1234567807, guardian=Guardian(name=quinn, email=quinn@gmail.com, mobileNumber=9876543227))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=19, studentName=suresh, age=21, studentEmailId=suresh@gmail.com, studentMobileNumber=1234567808, guardian=Guardian(name=richard, email=richard@gmail.com, mobileNumber=9876543228))
+2024-10-11 08:47:38   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=20, studentName=tanya, age=22, studentEmailId=tanya@gmail.com, studentMobileNumber=1234567809, guardian=Guardian(name=sarah, email=sarah@gmail.com, mobileNumber=9876543229))
+2024-10-11 08:47:38   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:47:38   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
+2024-10-11 08:47:38   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-11 08:57:20   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 7544 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
+2024-10-11 08:57:20   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
+2024-10-11 08:57:22   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11 08:57:22   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2024-10-11 08:57:22   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11 08:57:23   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11 08:57:23   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
+2024-10-11 08:57:23   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11 08:57:23   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
+2024-10-11 08:57:24   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@be6d228
+2024-10-11 08:57:24   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
+2024-10-11 08:57:25   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11 08:57:25   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:57:25   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11 08:57:26   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 6.56 seconds (process running for 8.359)
+2024-10-11 08:57:27   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:57:27   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
+2024-10-11 08:57:27   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-11 08:59:09   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 7713 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
+2024-10-11 08:59:09   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
+2024-10-11 08:59:10   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11 08:59:10   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2024-10-11 08:59:11   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11 08:59:11   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11 08:59:11   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
+2024-10-11 08:59:11   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11 08:59:12   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
+2024-10-11 08:59:12   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@be6d228
+2024-10-11 08:59:12   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
+2024-10-11 08:59:13   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11 08:59:14   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:59:14   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11 08:59:15   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 6.661 seconds (process running for 8.483)
+2024-10-11 08:59:16   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 08:59:16   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
+2024-10-11 08:59:16   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
+2024-10-11 09:00:35   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Starting SpringDataJpaApplicationTests using Java 21.0.4 with PID 7875 (started by ubuntu-admin in /home/ubuntu-admin/work/Springboot/spring-data-jpa/06-springDataJpa)
+2024-10-11 09:00:35   INFO  [main]  c.s.SpringDataJpaApplicationTests          - No active profile set, falling back to 1 default profile: "default"
+2024-10-11 09:00:36   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11 09:00:36   INFO  [main]  .s.d.r.c.RepositoryConfigurationDelegate   - Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2024-10-11 09:00:37   INFO  [main]  o.h.j.i.u.LogHelper                        - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11 09:00:37   INFO  [main]  o.h.Version                                - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11 09:00:37   INFO  [main]  o.h.c.i.RegionFactoryInitiator             - HHH000026: Second-level cache disabled
+2024-10-11 09:00:37   INFO  [main]  o.s.o.j.p.SpringPersistenceUnitInfo        - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11 09:00:38   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Starting...
+2024-10-11 09:00:38   INFO  [main]  c.z.h.p.HikariPool                         - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@be6d228
+2024-10-11 09:00:38   INFO  [main]  c.z.h.HikariDataSource                     - HikariPool-1 - Start completed.
+2024-10-11 09:00:40   INFO  [main]  o.h.e.t.j.p.i.JtaPlatformInitiator         - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11 09:00:40   INFO  [main]  j.LocalContainerEntityManagerFactoryBean   - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 09:00:40   WARN  [main]  JpaBaseConfiguration$JpaWebConfiguration   - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11 09:00:41   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Started SpringDataJpaApplicationTests in 6.524 seconds (process running for 8.741)
+2024-10-11 09:00:42   INFO  [main]  c.s.SpringDataJpaApplicationTests          - Student(studentId=2, studentName=anitha, age=20, studentEmailId=anitha@gmail.com, studentMobileNumber=1234567891, guardian=Guardian(name=alice, email=alice@gmail.com, mobileNumber=9876543211))
+2024-10-11 09:00:42   INFO  [SpringApplicationShutdownHook]  j.LocalContainerEntityManagerFactoryBean   - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11 09:00:42   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown initiated...
+2024-10-11 09:00:42   INFO  [SpringApplicationShutdownHook]  c.z.h.HikariDataSource                     - HikariPool-1 - Shutdown completed.
