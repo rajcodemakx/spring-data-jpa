@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
@@ -41,7 +43,7 @@ class ApplicationTests {
 
     }
 
-    @Test
+    // @Test
     public void sortingMethod() {
 
         Sort sort = Sort.by("guardianEmailAddress").ascending();
@@ -51,6 +53,31 @@ class ApplicationTests {
         for (Student student : students) {
             log.info(student.toString());
         }
+    }
+
+    @Test
+    public void paginationMethod() {
+
+        // 1 --> 3 data ==> 20/3 = 6.66 (round off)
+
+        long count = studentRepository.count();
+        int pageSize = 3;
+        
+        int pages = (int) Math.ceil((double)count/pageSize);
+        System.out.println("################ "+pages);
+        for (int i = 0; i <= pages; i++) {
+            PageRequest pageRequest = PageRequest.of(i, 3,Sort.by("studentId").ascending());
+
+            Page<Student> studentsPage = studentRepository.findAll(pageRequest);
+
+            List<Student> students = studentsPage.getContent();
+
+            for (Student student : students) {
+                log.info(student.toString());
+            }
+        }
+
+
     }
 
 }

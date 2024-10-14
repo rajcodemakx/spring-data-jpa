@@ -1,0 +1,6 @@
+
+Start
+    1. find total count
+    2. totalPages = total count/ pagesize ; -> round off 20/3 = 6.66
+    3. loop
+           print
